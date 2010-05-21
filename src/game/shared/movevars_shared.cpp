@@ -19,7 +19,7 @@
 #endif */
 // Obsolete gravity code is obsolete :3
 
-ConVar	sv_gravity		( "sv_gravity","290", FCVAR_NOTIFY | FCVAR_REPLICATED, "World gravity." ); // low gravity = high fun
+ConVar	sv_gravity		( "sv_gravity","400", FCVAR_NOTIFY | FCVAR_REPLICATED, "World gravity." ); // low gravity = high fun
 
 #if defined(DOD_DLL)
 ConVar	sv_stopspeed	( "sv_stopspeed","100", FCVAR_NOTIFY | FCVAR_REPLICATED, "Minimum stopping speed when on ground." );
