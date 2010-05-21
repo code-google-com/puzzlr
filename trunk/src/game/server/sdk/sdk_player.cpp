@@ -445,7 +445,7 @@ CBaseEntity* CSDKPlayer::EntSelectSpawnPoint()
 #endif // SDK_USE_TEAMS
 	case TEAM_UNASSIGNED:
 		{
-			pSpawnPointName = "info_player_deathmatch";
+			pSpawnPointName = "info_player_spawn";
 			pSpot = g_pLastDMSpawn;
 			if ( SelectSpawnSpot( pSpawnPointName, pSpot ) )
 			{
@@ -589,7 +589,7 @@ int CSDKPlayer::OnTakeDamage( const CTakeDamageInfo &inputInfo )
 		{
 			if ( pInflictor->GetTeamNumber() == GetTeamNumber() && bCheckFriendlyFire)
 			{
-				flDamage *= 0.35; // bullets hurt teammates less
+				flDamage *= 0.65; // bullets hurt teammates less but not as much as low (0.35)
 			}
 		}
 
@@ -914,7 +914,7 @@ void CSDKPlayer::CheatImpulseCommands( int iImpulse )
 		return;
 	}
 
-	if ( iImpulse != 101 )
+	if ( iImpulse != 101 && )
 	{
 		BaseClass::CheatImpulseCommands( iImpulse );
 		return ;
