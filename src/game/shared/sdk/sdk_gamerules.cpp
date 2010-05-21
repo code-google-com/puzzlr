@@ -5,6 +5,11 @@
 // $NoKeywords: $
 //=============================================================================//
 
+#define PUZZLR_BUILD_REV "0.9.32454"			// Full Build Number
+#define SERVERDLL_BUILD_REV "0.5.11746"			// Server Build Number
+#define CLIENTDLL_BUILD_REV "0.4.20708"			// Client Build Number
+#define PUZZLR_BUILD_STAGE "Beta3"         		// Current Release Stage
+
 #include "cbase.h"
 #include "sdk_gamerules.h"
 #include "ammodef.h"
@@ -32,7 +37,6 @@
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
-
 
 #ifndef CLIENT_DLL
 
@@ -532,7 +536,7 @@ void TestSpawnPointType( const char *pEntClassName )
 
 void TestSpawns()
 {
-	TestSpawnPointType( "info_player_deathmatch" );
+	TestSpawnPointType( "info_player_spawn" );
 #if defined ( SDK_USE_TEAMS )
 	TestSpawnPointType( "info_player_blue" );
 	TestSpawnPointType( "info_player_red" );
@@ -1319,4 +1323,69 @@ float CSDKGameRules::GetMapRemainingTime()
 float CSDKGameRules::GetMapElapsedTime( void )
 {
 	return gpGlobals->curtime;
+}
+
+// Custom commands start here!
+
+CON_COMMAND( changelog, "puzzlr console change log" )
+{
+Msg( "Change Log\n\
+  Puzzlr 0.9.32454\n\
+    Added\n\
+	  * New generic multiplayer OB engine\n\
+	  * Whole new maps to renew the gameplay\n\
+    Removed\n\
+	  * Original HL2:DM basis\n\
+    Fixed\n\
+	  * Fixed potentially unwanted bugs from previous engine\n\
+  Puzzlr 0.8.78530\n\
+    Fixed\n\
+      * Fixed Over-Sized Physgun FX\n\
+      * Fixed Custom Console Commands\n\
+  Puzzlr 0.8.78330\n\
+    Added\n\
+      * Added Seven New Maps\n\
+      * Added Lighting To Most Maps\n\
+    Fixed\n\
+      * Fixed noclip Bug -- Thanks, Floppen!\n\
+      * Fixed Screen Shake Bug\n\
+      * Fixed impulse 101 command\n\
+  Puzzlr 0.7.42575\n\
+    Added\n\
+      * Added Four New Maps\n\
+      * Added Nine New Puzzlr Cube Skins\n\
+    Fixed\n\
+      * Fixed 'Vitruvian Man' Bug\n\
+      * Began Fixing Multiplayer Tab of Options\n\
+  Puzzlr 0.5.61924\n\
+    Added\n\
+      * Added Changelog\n\
+      * Added Credits\n\
+      * Added Test Command\n\
+      * Added SBX_Canada to default maps\n\
+    Removed\n\
+      * Removed MOTD\n\
+    Fixed\n\
+      * Fixed Undefined Ammo Bug\n\
+      * Fixed ConVar Conflictions\n" );
+}
+
+CON_COMMAND( credits, "puzzlr credits and version info" )
+{
+Msg( "Release Information\n\
+  Puzzlr - Build %s\n\
+  Server DLL - Build %s\n\
+  Client DLL - Build %s\n\
+  Release Stage : %s\n\
+ \n\
+  Puzzlr Credits\n\
+  Engine Modifications by Aaron Weiss\n\
+  Hammer Mapping by Mitchell Andrews\n\
+  Secondary Hammer Mapping by Aaron Weiss\n\
+  Published by Deviant Core Ltd.\n\
+  Developed by Deviant-Core Team\n\
+  Menu Music by DJ Babokon of Newgrounds\n\
+  Special Thanks To Floppen for Bug Squashing\n\
+  Thanks!\n", 
+  PUZZLR_BUILD_REV, SERVERDLL_BUILD_REV, CLIENTDLL_BUILD_REV, PUZZLR_BUILD_STAGE );
 }
