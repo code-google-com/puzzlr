@@ -5,11 +5,6 @@
 // $NoKeywords: $
 //=============================================================================//
 
-#define PUZZLR_BUILD_REV "0.9.32454"			// Full Build Number
-#define SERVERDLL_BUILD_REV "0.5.11746"			// Server Build Number
-#define CLIENTDLL_BUILD_REV "0.4.20708"			// Client Build Number
-#define PUZZLR_BUILD_STAGE "Beta3"         		// Current Release Stage
-
 #include "cbase.h"
 #include "sdk_gamerules.h"
 #include "ammodef.h"
@@ -37,6 +32,11 @@
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
+
+#define PUZZLR_BUILD_REV "0.9.32454"			// Full Build Number
+#define SERVERDLL_BUILD_REV "0.5.11746"			// Server Build Number
+#define CLIENTDLL_BUILD_REV "0.4.20708"			// Client Build Number
+#define PUZZLR_BUILD_STAGE "Beta3"         		// Current Release Stage
 
 #ifndef CLIENT_DLL
 

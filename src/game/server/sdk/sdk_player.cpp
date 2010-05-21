@@ -914,7 +914,7 @@ void CSDKPlayer::CheatImpulseCommands( int iImpulse )
 		return;
 	}
 
-	if ( iImpulse != 101 && )
+	if ( iImpulse != 101 )
 	{
 		BaseClass::CheatImpulseCommands( iImpulse );
 		return ;
