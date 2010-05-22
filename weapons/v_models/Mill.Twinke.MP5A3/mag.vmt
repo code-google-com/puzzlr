@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+"$baseTexture" "models\weapons\V_models\Mill.Twinke.MP5A3\mag"
+"$bumpmap" "models\weapons\V_models\Mill.Twinke.MP5A3\mag_norm"
+"$phong" "1"
+"$phongexponent" "10"
+"$phongboost"	"1"
+"$phongfresnelranges"	"[.2 4 1]"
+}
+	
