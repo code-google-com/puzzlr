@@ -1,0 +1,45 @@
+"Weapon_mp5sd.clipout"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"PITCH_NORM"
+	"wave"			"weapons\mp5navy\Clipout.wav"
+	
+}
+"Weapon_mp5sd.clipin"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"PITCH_NORM"
+	"wave"			"weapons\mp5navy\Clipin.wav"
+	
+}
+"Weapon_mp5sd.boltpull"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"PITCH_NORM"
+	"wave"			"weapons\mp5navy\Boltpull.wav"
+	
+}
+"Weapon_mp5sd.boltslap"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"PITCH_NORM"
+	"wave"			"weapons\mp5navy\Slap.wav"
+	
+}
+"Weapon_mp5sd.draw"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"PITCH_NORM"
+	"wave"			"weapons\mp5navy\boltpull.wav"
+	
+}
