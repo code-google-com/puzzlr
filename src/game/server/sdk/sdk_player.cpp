@@ -445,7 +445,7 @@ CBaseEntity* CSDKPlayer::EntSelectSpawnPoint()
 #endif // SDK_USE_TEAMS
 	case TEAM_UNASSIGNED:
 		{
-			pSpawnPointName = "info_player_start";
+			pSpawnPointName = "info_player_deathmatch";
 			pSpot = g_pLastDMSpawn;
 			if ( SelectSpawnSpot( pSpawnPointName, pSpot ) )
 			{
