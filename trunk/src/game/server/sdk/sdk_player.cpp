@@ -914,10 +914,17 @@ void CSDKPlayer::CheatImpulseCommands( int iImpulse )
 		return;
 	}
 
-	if ( iImpulse != 101 )
+	if ( iImpulse != 101 && iImpulse != 102)
 	{
 		BaseClass::CheatImpulseCommands( iImpulse );
-		return ;
+		return;
+	}
+	if (iImpulse == 102) 
+	{
+		CCommand args;
+		args.Tokenize( "kill" );
+		ClientCommand( args );
+		return;
 	}
 	gEvilImpulse101 = true;
 
@@ -1388,7 +1395,8 @@ void CSDKPlayer::State_Enter_WELCOME()
 		const char *title = (hostname) ? hostname->GetString() : "MESSAGE OF THE DAY";
 
 		// open info panel on client showing MOTD:
-		KeyValues *data = new KeyValues("data");
+		
+		/* KeyValues *data = new KeyValues("data");
 		data->SetString( "title", title );		// info panel title
 		data->SetString( "type", "1" );			// show userdata from stringtable entry
 		data->SetString( "msg",	"motd" );		// use this stringtable entry
@@ -1396,7 +1404,8 @@ void CSDKPlayer::State_Enter_WELCOME()
 
 		ShowViewPortPanel( PANEL_INFO, true, data );
 
-		data->deleteThis();
+		data->deleteThis(); */
+		// MOTD Begone!	
 
 	}	
 }

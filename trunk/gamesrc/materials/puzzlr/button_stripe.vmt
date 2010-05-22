@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "puzzlr/button_stripe"
+	"$translucent" 1
+}

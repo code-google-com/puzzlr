@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "puzzlr/tile"
+	"$translucent" 1
+}

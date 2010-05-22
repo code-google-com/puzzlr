@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "puzzlr/green_cube"
+	"$surfaceprop" "Metal_Box"
+	"$surfaceprop2" "Metal_Box"
+	"$translucent" 1
+}
